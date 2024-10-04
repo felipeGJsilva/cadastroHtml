@@ -16,7 +16,7 @@
         }
 
         body.dark-mode {
-            background-color: #212529;  
+            background-color: #212529;
         }
 
         .navbar {
@@ -133,6 +133,9 @@
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" href="#cadastro_usuarios">Cadastro de Usuários</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#cadastro_recursos">Cadastro de Recursos Alugáveis</a>
+        </li>
     </ul>
 
     <!-- Tab content -->
@@ -194,6 +197,33 @@
                         <input type="password" class="form-control" id="senhaUsuario" placeholder="Insira a senha" required>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Registrar Usuário</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Cadastro de Recursos Alugáveis -->
+        <div class="tab-pane fade" id="cadastro_recursos">
+            <section class="form-section bg-light">
+                <h2 class="text-center mb-4">Cadastro de Recursos Alugáveis</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="quantidadeRecurso" class="form-label">Quantidade</label>
+                        <input type="number" class="form-control" id="quantidadeRecurso" placeholder="Insira a quantidade de recursos" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="identificacaoRecurso" class="form-label">Identificação</label>
+                        <input type="text" class="form-control" id="identificacaoRecurso" placeholder="Insira a identificação do recurso" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="statusRecurso" class="form-label">Status</label>
+                        <select class="form-select" id="statusRecurso" required>
+                            <option value="" selected disabled>Escolha o status do recurso</option>
+                            <option value="Disponível">Disponível</option>
+                            <option value="Indisponível">Indisponível</option>
+                            <option value="Em manutenção">Em manutenção</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Registrar Recurso</button>
                 </form>
             </section>
         </div>
